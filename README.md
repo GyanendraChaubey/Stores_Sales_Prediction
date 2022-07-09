@@ -1,2 +1,7 @@
 # Stores_Sales_Prediction
-This is internship project of ineuron - Level Intermediate
+
+Start Stores Sales Prediction Project
+
+Requirements:
+
+1. Github Account : 
