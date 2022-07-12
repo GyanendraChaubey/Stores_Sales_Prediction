@@ -1,5 +1,5 @@
 from xml.etree.ElementTree import VERSION
-from setuptools import setup
+from setuptools import find_packages, setup
 from typing import List
 
 #Declaring variables for setup function
@@ -8,6 +8,7 @@ VERSION="0.0.1"
 AUTHOR="Gyanendra Chaubey"
 DESCRIPTION="This is ineuron internship project"
 PACKAGES=["storesales"]
+
 REQUIREMENT_FILE_NAME="requirements.txt"
 
 
@@ -29,6 +30,6 @@ name=PROJECT_NAME,
 version=VERSION,
 author=AUTHOR,
 description=DESCRIPTION,
-packages=PACKAGES,
+packages=find_packages(),
 install_requires=get_requirements_list()
 )
