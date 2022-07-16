@@ -1,7 +1,8 @@
 from flask import Flask
 import sys
-from storesales.exception import StoresalesException
 from storesales.logger import logging
+from storesales.exception import StoresalesException
+
 
 app=Flask(__name__)
 
