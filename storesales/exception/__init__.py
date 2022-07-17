@@ -16,7 +16,7 @@ class StoresalesException(Exception):
         error_message: Exception object
         error_detail: object of sys module
         """
-        _,_ ,exec_tb = error_detail.exec_info()
+        _,_ ,exec_tb = error_detail.exc_info()
         line_number = exec_tb.tb_frame.f_lineno
         file_name = exec_tb.tb_frame.f_code.co_filename
         error_message = f"Error occured in script: [{file_name}] at line number: [{line_number}] error message: [{error_message}]"

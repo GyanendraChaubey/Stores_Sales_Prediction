@@ -82,8 +82,8 @@ class Configuration:
         try:
             training_pipleine_config=self.config_info[TRAINING_PIPELINE_CONFIG_KEY]
             artifact_dir=os.path.join(ROOT_DIR,
-            training_pipeline_config[TRAINING_PIPELINE_NAME_KEY],
-            training_pipeline_config[TRAINING_PIPELINE_ARTIFACT_DIR_KEY]
+            training_pipleine_config[TRAINING_PIPELINE_NAME_KEY],
+            training_pipleine_config[TRAINING_PIPELINE_ARTIFACT_DIR_KEY]
             )
 
             training_pipeline_config=TrainingPipelineConfig(artifact_dir=artifact_dir)
@@ -91,5 +91,5 @@ class Configuration:
             return training_pipeline_config
         
         except Exception as e:
-            raise StoresalesException(sys,e) from e
+            raise StoresalesException(e,sys) from e
 

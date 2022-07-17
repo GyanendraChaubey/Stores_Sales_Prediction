@@ -13,7 +13,7 @@ def index():
        raise Exception("We are testing custom exception")
     except Exception as e:
         storesales = StoresalesException(e,sys)
-        #logging.info(storesales.error)
+        logging.info(storesales.error_message)
         logging.info("We are testing logging")
     return "CI CD Pipeline has been established"
 
