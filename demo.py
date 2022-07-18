@@ -1,5 +1,5 @@
 from storesales import pipeline
-from storesales.pipeline import Pipeline
+from storesales.pipeline.pipeline import Pipeline
 from storesales.exception import StoresalesException
 from storesales.logger import logging
 

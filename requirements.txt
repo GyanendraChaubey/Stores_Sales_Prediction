@@ -4,5 +4,4 @@ gunicorn
 sklearn
 pandas
 PyYAML
-urllib
 -e .
