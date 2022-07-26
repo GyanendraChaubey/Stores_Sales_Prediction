@@ -6,7 +6,7 @@ from storesales.logger import logging
 from storesales.entity.artifact_entity import DataIngestionArtifact
 import tarfile
 import numpy as np
-import six.moves import urllib
+from six.moves import urllib
 import pandas as pd
 from sklearn.model_selection import StratifiedShuffleSplit
 
@@ -22,7 +22,7 @@ class DataIngestion:
     
     def download_storesales_data(self,)->str:
         try:
-            #extractio of remote url to download dataset
+            #extraction of remote url to download dataset
             download_url=self.data_ingestion_config.dataset_download_url
 
             #folder location to download file
@@ -67,7 +67,7 @@ class DataIngestion:
         try:
             raw_data_dir=self.data_ingestion_config.raw_data_dir
 
-            file_name=os.path.join(raw_data_dir)[0]
+            file_name=os.listdir(raw_data_dir)[0]
 
             storesales_file_path=os.path.join(raw_data_dir,file_name)
 

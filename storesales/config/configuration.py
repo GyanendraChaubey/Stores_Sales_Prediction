@@ -10,7 +10,7 @@ from storesales.exception import StoresalesException
 
 class Configuration:
 
-    def __init__(self, config_file_path:CONFIG_FILE_PATH, current_time_stamp:str=CURRENT_TIME_STAMP)->None:
+    def __init__(self, config_file_path:str=CONFIG_FILE_PATH, current_time_stamp:str=CURRENT_TIME_STAMP)->None:
         try:
             self.config_info = read_yaml_file(file_path=config_file_path)
             self.training_pipeline_config = self.get_training_pipeline_config()
@@ -35,11 +35,11 @@ class Configuration:
                 data_ingestion_info[DATA_INGESTION_TGZ_DOWNLOAD_DIR_KEY]
             )
             raw_data_dir=os.path.join(data_ingestion_artifact_dir,
-            data_ingestion_info[DATA_INGESTION_INGESTED_DIR_NAME_KEY]
+            data_ingestion_info[DATA_INGESTION_RAW_DATA_DIR_KEY]
             )
             ingested_data_dir=os.path.join(
                 data_ingestion_artifact_dir,
-                data_ingestion_info[DATA_INGESTION_TRAIN_DIR_KEY]
+                data_ingestion_info[DATA_INGESTION_INGESTED_DIR_NAME_KEY]
             )
             ingested_train_dir=os.path.join(
                 ingested_data_dir,
