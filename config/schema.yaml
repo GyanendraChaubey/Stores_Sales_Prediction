@@ -1,0 +1,24 @@
+lines (19 sloc)  390 Bytes
+
+columns:
+  Item_Identifier: category
+  Item_Weight: float
+  Item_Fat_Content: category
+  Item_Visibility: float
+  Item_Type: category
+  Item_MRP: float
+  Outlet_Identifier: category
+  Outlet_Establishment_Year: int
+  Outlet_Size: category
+  Outlet_Location_Type: category
+  Outlet_Type: category
+
+target_column: Item_Outlet_Sales
+
+domain_value:
+  ocean_proximity:
+    - <1H OCEAN
+    - INLAND
+    - ISLAND
+    - NEAR BAY
+    - NEAR OCEAN
